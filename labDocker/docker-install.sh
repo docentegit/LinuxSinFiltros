@@ -6,4 +6,5 @@ sudo apt update
 sudo apt install docker-ce -y
 sudo apt install docker-compose-plugin -y
 sudo usermod -aG docker ${USER}
+newgrp docker
 su - ${USER} -c "docker info"
