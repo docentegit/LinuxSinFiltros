@@ -1,11 +1,10 @@
-version: '3'
-service:
- web:
-  image: nginx
-  volumes:
-   - ./templates:/etc/nginx/templates
-  ports:
-   - "8080:80"
-  environment:
-   - NGINX_HOST=foobar.com
-   - NGINX_PORT=80
+services:                     # ← plural "services"
+  web:                        # ← indentación correcta
+    image: nginx
+    volumes:
+      - ./templates:/etc/nginx/templates   # bind mount (volumen local)
+    ports:
+      - "8080:80"
+    environment:
+      - NGINX_HOST=openti.com.bo
+      - NGINX_PORT=80
