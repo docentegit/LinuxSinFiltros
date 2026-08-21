@@ -1,5 +1,5 @@
-services:                     # ← plural "services"
-  web:                        # ← indentación correcta
+services:
+  web:
     image: nginx
     volumes:
       - ./templates:/etc/nginx/templates   # bind mount (volumen local)
